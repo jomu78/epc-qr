@@ -21,7 +21,7 @@
 
   <groupId>de.muehlencord.epcqr</groupId>
   <artifactId>epc-qr</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0-SNAPSHOT</version>
 
   <name>epc-qr</name>
   <description>
@@ -34,7 +34,7 @@
     <connection>scm:git:git@github.com:jomu78/epc-qr.git</connection>
     <developerConnection>scm:git:git@github.com:jomu78/epc-qr.git</developerConnection>
     <url>https://github.com/jomu78/epc-qr</url>
-    <tag>v1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <ciManagement>
