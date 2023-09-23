@@ -4,6 +4,12 @@ epc-qr
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://raw.githubusercontent.com/jomu78/epc-qr/master/LICENSE.txt)
 [![Build Status](https://github.com/jomu78/epc-qr/actions/workflows/maven.yml/badge.svg)](https://github.com/jomu78/epc-qr/actions/workflows/maven.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.muehlencord.epcqr/epc-qr/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.muehlencord.epcqr/epc-qr)
+[![JavaDoc](https://javadoc.io/badge/de.muehlencord.epcqr/epc-qr.svg)](https://www.javadoc.io/doc/de.muehlencord.epcqr/epc-qr)
+[![Java Doc](https://snyk.io/test/github/jomu78/epc-qr/badge.svg?style=flat)](https://snyk.io/test/github/jomu78/epc-qr)
+
+
+
+
 
 A Java library for generation of EPC QR Code.
 
