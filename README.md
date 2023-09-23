@@ -2,6 +2,7 @@ epc-qr
 ======
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://raw.githubusercontent.com/jomu78/epc-qr/master/LICENSE.txt)
+[![Build Status](https://github.com/jomu78/epc-qr/actions/workflows/maven.yml/badge.svg)](https://github.com/jomu78/epc-qr/actions/workflows/maven.yml)
 
 A Java library for generation of EPC QR Code.
 
