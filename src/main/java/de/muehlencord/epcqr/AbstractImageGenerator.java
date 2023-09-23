@@ -26,26 +26,48 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Add a short description of the class
+ * abstract image generator with some default implementations.
  *
  * @author Joern Muehlencord, 2023-09-23
- * @since TODO - add versiom
+ * @since 1.0.0
  */
 public abstract class AbstractImageGenerator implements QrCodeGenerator<String>{
+  /**
+   * the charset to use inside the image when generating it. Defaults to UTF-8.
+   */
   protected String charset = "UTF-8";
 
+  /**
+   * the encoding hints to be used when rendering the QR code.
+   */
   protected final Map<EncodeHintType, ErrorCorrectionLevel> hints = new HashMap<>();
 
+  /**
+   * the width of the image to be generated.  Defaults to 300 pixel.
+   */
   @Getter
   protected int width = 300;
 
+  /**
+   * the height of the image to be generated. Defaults to 300 pixel.
+   */
   @Getter
   protected int height = 300;
 
+  /**
+   * the output format of the image to be used when rendering the image. Defaults to PNG.
+   */
   @Getter
   protected ImageFormat format = ImageFormat.PNG;
 
-  abstract protected String createQR(String data, Map<EncodeHintType, ErrorCorrectionLevel> map) throws EpcException;
+  /**
+   * create the QR code
+   * @param data the EPC data in the specified format. Use the EpcBuilder to generate it
+   * @param hints the hints to use
+   * @return depends on the implementation of the image generator.
+   * @throws EpcException if the QR code cannot be rendered.
+   */
+  abstract protected String createQR(String data, Map<EncodeHintType, ErrorCorrectionLevel> hints) throws EpcException;
 
 
   /**

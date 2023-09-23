@@ -28,12 +28,33 @@ import lombok.Getter;
 @Getter
 public enum ImageFormat {
 
+  /**
+   * image format bmp
+   */
   BMP("bmp"),
+  /**
+   * image format tif
+   */
   TIF("tif"),
+  /**
+   * image format pnm
+   */
   PNM("pnm"),
+  /**
+   * image format pcx
+   */
   PCX("pcx"),
+  /**
+   * image format png
+   */
   PNG("png"),
+  /**
+   * image format gif
+   */
   GIF("gif"),
+  /**
+   * image format jpg
+   */
   JPG("jpg");
 
   private String name;

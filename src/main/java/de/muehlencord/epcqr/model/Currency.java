@@ -32,6 +32,9 @@ import java.util.Map;
 @Getter
 public enum Currency {
 
+  /**
+   * EURO
+   */
   EUR("EUR");
 
   private String label;
@@ -48,6 +51,13 @@ public enum Currency {
     }
   }
 
+  /**
+   * create a new Currency instance using the label of it.
+   *
+   * @param label the label to use to create the instance from
+   * @return the currency with the given label.
+   * @throws EpcException if no currency with the given label is available.
+   */
   public static Currency getInstanceByLabel(String label) throws EpcException {
     if (!labelMap.containsKey(label)) {
       throw new EpcException(String.format("Currency %s not found", label));
