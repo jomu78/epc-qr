@@ -25,10 +25,16 @@ package de.muehlencord.epcqr;
  */
 public class EpcException extends Exception {
 
+  /**
+   * {@inheritDoc }
+   */
   public EpcException(String message) {
     super(message);
   }
 
+  /**
+   * {@inheritDoc }
+   */
   public EpcException(String message, Throwable cause) {
     super(message, cause);
   }

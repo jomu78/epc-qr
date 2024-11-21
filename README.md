@@ -2,6 +2,14 @@ epc-qr
 ======
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://raw.githubusercontent.com/jomu78/epc-qr/master/LICENSE.txt)
+[![Build Status](https://github.com/jomu78/epc-qr/actions/workflows/maven.yml/badge.svg)](https://github.com/jomu78/epc-qr/actions/workflows/maven.yml)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.muehlencord.epcqr/epc-qr/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.muehlencord.epcqr/epc-qr)
+[![JavaDoc](https://javadoc.io/badge/de.muehlencord.epcqr/epc-qr.svg)](https://www.javadoc.io/doc/de.muehlencord.epcqr/epc-qr)
+[![Java Doc](https://snyk.io/test/github/jomu78/epc-qr/badge.svg?style=flat)](https://snyk.io/test/github/jomu78/epc-qr)
+
+
+
+
 
 A Java library for generation of EPC QR Code.
 
@@ -33,7 +41,7 @@ The European Payments Council Quick Response Code guidelines define the content 
 <dependency>
   <groupId>de.muehlencord.epcqr</groupId>
   <artifactId>epc-qr</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
 </dependency>
 ```
 
@@ -45,6 +53,6 @@ The European Payments Council Quick Response Code guidelines define the content 
 - https://www.iban.com/testibans
 
 ## License
-Copyright 2023 Jörn Mühlencord
+Copyright 2023-2024 Jörn Mühlencord
 
 Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0

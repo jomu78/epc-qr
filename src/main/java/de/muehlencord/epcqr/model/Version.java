@@ -32,7 +32,13 @@ import java.util.Map;
 @Getter
 public enum Version {
 
+  /**
+   * version 1
+   */
   V001("001"),
+  /**
+   * version 2 (default)
+   */
   V002("002");
 
   private String label;
@@ -49,6 +55,13 @@ public enum Version {
     }
   }
 
+  /**
+   * create a new Version instance using the label of it.
+   *
+   * @param label the label to use to create the instance from
+   * @return the version with the given label.
+   * @throws EpcException if no version with the given label is available.
+   */
   public static Version getInstanceByLabel(String label) throws EpcException {
     if (label == null) {
       throw new EpcException("Version must not be null");

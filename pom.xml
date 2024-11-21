@@ -21,7 +21,7 @@
 
   <groupId>de.muehlencord.epcqr</groupId>
   <artifactId>epc-qr</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
 
   <name>epc-qr</name>
   <description>
@@ -34,7 +34,7 @@
     <connection>scm:git:git@github.com:jomu78/epc-qr.git</connection>
     <developerConnection>scm:git:git@github.com:jomu78/epc-qr.git</developerConnection>
     <url>https://github.com/jomu78/epc-qr</url>
-    <tag>v1.0.0</tag>
+    <tag>v1.1.0</tag>
   </scm>
 
   <ciManagement>
@@ -80,13 +80,15 @@
     <licenses.dir>${project.build.directory}/third-party-licenses</licenses.dir>
 
     <!-- managed versions -->
-    <zxing.version>3.5.2</zxing.version>
+    <zxing.version>3.5.3</zxing.version>
     <iban4j.version>3.2.6-RELEASE</iban4j.version>
-    <commons-lang.version>3.13.0</commons-lang.version>
-    <slf4j.version>2.0.7</slf4j.version>
-    <junit-jupiter.version>5.9.3</junit-jupiter.version>
-    <assertj.version>3.24.2</assertj.version>
-    <lombok.version>1.18.30</lombok.version>
+    <commons-lang.version>3.17.0</commons-lang.version>
+    <slf4j.version>2.0.16</slf4j.version>
+    <junit-jupiter.version>5.11.3</junit-jupiter.version>
+    <assertj.version>3.26.3</assertj.version>
+    <lombok.version>1.18.36</lombok.version>
+
+    <maven-javadoc-plugin.version>3.11.1</maven-javadoc-plugin.version>
   </properties>
 
 
@@ -156,7 +158,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
-            <version>3.1.1</version>
             <executions>
               <execution>
                 <id>attach-javadocs</id>
@@ -171,7 +172,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-source-plugin</artifactId>
-            <version>3.2.1</version>
+            <version>3.3.0</version>
             <executions>
               <execution>
                 <id>attach-sources</id>
@@ -186,7 +187,7 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>license-maven-plugin</artifactId>
-            <version>2.0.0</version>
+            <version>2.2.0</version>
             <executions>
               <execution>
                 <id>download-licenses</id>
@@ -223,7 +224,7 @@
               </execution>
             </executions>
             <configuration>
-              <keyname>993245E2EC7608BB</keyname>
+              <keyname>3448E23404383EEA</keyname>
             </configuration>
           </plugin>
 
@@ -245,6 +246,16 @@
   </profiles>
 
   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${maven-javadoc-plugin.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
     <plugins>
       <!-- create war archive -->
       <plugin>
