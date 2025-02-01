@@ -53,6 +53,6 @@ The European Payments Council Quick Response Code guidelines define the content 
 - https://www.iban.com/testibans
 
 ## License
-Copyright 2023-2024 Jörn Mühlencord
+Copyright 2023-2025 Jörn Mühlencord
 
 Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
