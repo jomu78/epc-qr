@@ -21,7 +21,7 @@
 
   <groupId>de.muehlencord.epcqr</groupId>
   <artifactId>epc-qr</artifactId>
-  <version>1.2.0-SNAPSHOT</version>
+  <version>1.1.1-SNAPSHOT</version>
 
   <name>epc-qr</name>
   <description>
@@ -63,12 +63,12 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <id>central</id>
+      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
     </snapshotRepository>
     <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>central</id>
+      <url>https://central.sonatype.com/</url>
     </repository>
   </distributionManagement>
 
@@ -83,17 +83,17 @@
     <zxing.version>3.5.3</zxing.version>
     <iban4j.version>3.2.6-RELEASE</iban4j.version>
     <commons-lang.version>3.18.0</commons-lang.version>
-    <slf4j.version>2.0.16</slf4j.version>
+    <slf4j.version>2.0.17</slf4j.version>
     <junit-jupiter.version>5.11.4</junit-jupiter.version>
     <assertj.version>3.26.3</assertj.version>
-    <lombok.version>1.18.36</lombok.version>
+    <lombok.version>1.18.38</lombok.version>
 
     <!-- plugin versions -->
     <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
     <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
     <license-maven-plugin.version>2.2.0</license-maven-plugin.version>
     <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
-    <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
+    <central-publishing-maven-plugin.version>0.7.0</central-publishing-maven-plugin.version>
     <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
     <maven-release-plugin.version>3.1.1</maven-release-plugin.version>
   </properties>
@@ -237,14 +237,13 @@
 
           <!-- deploy to OSSRH Sonatype -->
           <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
-            <version>${nexus-staging-maven-plugin.version}</version>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <version>${central-publishing-maven-plugin.version}</version>
             <extensions>true</extensions>
             <configuration>
-              <serverId>ossrh</serverId>
-              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-              <autoReleaseAfterClose>true</autoReleaseAfterClose>
+              <publishingServerId>central</publishingServerId>
+              <autoPublish>true</autoPublish>
             </configuration>
           </plugin>
         </plugins>
