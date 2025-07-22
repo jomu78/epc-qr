@@ -41,7 +41,7 @@ The European Payments Council Quick Response Code guidelines define the content 
 <dependency>
   <groupId>de.muehlencord.epcqr</groupId>
   <artifactId>epc-qr</artifactId>
-  <version>1.1.0</version>
+  <version>1.1.3</version>
 </dependency>
 ```
 
