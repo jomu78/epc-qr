@@ -360,7 +360,7 @@ public class EpcBuilder {
     // 11 - purposeText
     sb.append(getValueString(purposeText)).append(System.lineSeparator());
     // 12 - note
-    sb.append(getValueString(note)).append(System.lineSeparator());
+    sb.append(getValueString(note));
 
     return sb.toString();
   }

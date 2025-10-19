@@ -60,8 +60,7 @@ class EpcBuilderTest {
       "EUR48.81\n" +
       "\n" +
       "\n" +
-      "Test\n" +
-      "\n";
+      "Test\n";
 
     var builder = new EpcBuilder()
       .withRecipient("Max Mustermann")
@@ -76,10 +75,10 @@ class EpcBuilderTest {
     assertThat(base64).isNotNull();
 
     String fileName = new ImageFileGenerator().generate(builder);
-    logger.info ("file: {}", fileName);
+    logger.info("file: {}", fileName);
     assertThat(fileName).isNotNull();
-    assertTrue (Paths.get(fileName).toFile().isFile());
-    assertTrue (Paths.get(fileName).toFile().exists());
+    assertTrue(Paths.get(fileName).toFile().isFile());
+    assertTrue(Paths.get(fileName).toFile().exists());
   }
 
 }
