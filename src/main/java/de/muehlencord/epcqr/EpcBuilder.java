@@ -265,6 +265,9 @@ public class EpcBuilder {
    * @throws EpcException if the note cannot be set - e.g. because the text is longer thank 70 characters.
    */
   public EpcBuilder withNote(String note) throws EpcException {
+    if (note == null) {
+      return this;
+    }
     assertLength("note", note, 70);
     this.note = note;
     return this;

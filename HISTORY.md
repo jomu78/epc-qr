@@ -1,6 +1,10 @@
 epc-qr history
 ==============
 
+## 1.1.3 (2025-xx-xx)
+
+* make EpcBuilder withNote null-save
+
 ## 1.1.3 (2025-07-22)
 
 * update dependencies, fix CVE-2025-48924
